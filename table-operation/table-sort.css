@@ -1,0 +1,37 @@
+
+
+#sortable {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+}
+
+#sortable .number {
+    text-align: right;
+}
+
+#sortable td,
+#sortable th {
+    padding: 5px;
+}
+
+#sortable tfoot {
+    font-weight: bold;
+}
+
+#sortable td {
+    border-right: 1px solid rgb(179, 176, 176);
+}
+
+#sortable td:first-child {
+    border-left: 1px solid rgb(179, 176, 176);
+}
+
+#sortable thead th,
+#sortable tfoot td {
+    border: 1px solid rgb(179, 176, 176);
+}
+
+#sortable th:hover {
+    cursor: pointer;
+}

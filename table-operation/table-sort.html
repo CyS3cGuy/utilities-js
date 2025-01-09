@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="table-sort.css">
+    <script src="table-sort.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>House Campaigns <i class="icon-minus"></i></h2>
+
+    <h2>EXE Publisher <i class="icon-minus"></i></h2>
+    <table id="sortable">
+        <thead>
+            <tr class="header">
+                <th sort-type="name" sort-algorithm="original">Name</th>
+                <th sort-type="number" sort-algorithm="original" class="number">DAU Stats</th>
+                <th sort-type="money" sort-algorithm="original">Revenue</th>
+                <th sort-type="money" sort-algorithm="original">Spent</th>
+                <th sort-type="money" sort-algorithm="original">Expenses</th>
+                <th sort-type="money" sort-algorithm="original">Final Profit</th>
+                <th sort-type="percent" sort-algorithm="original">Margin</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="awful">
+                <td><a href="#">Publisher 19</a></td>
+                <td class="number">48,444</td>
+                <td class="money">$613.35</td>
+                <td class="money">$670.80</td>
+                <td class="money">$41.35</td>
+                <td class="money">($98.80)</td>
+                <td class="percent">-16.1%</td>
+            </tr>
+            <tr class="awful">
+                <td><a href="#">Publisher 12</a></td>
+                <td class="number">8842</td>
+                <td class="money">$7.23</td>
+                <td class="money">$2.13</td>
+                <td class="money">$7.55</td>
+                <td class="money">($2.44)</td>
+                <td class="percent">-33.8%</td>
+            </tr>
+            <tr class="good">
+                <td><a href="#">Publisher 11</a></td>
+                <td class="number">122444</td>
+                <td class="money">$642.87</td>
+                <td class="money">$82.45</td>
+                <td class="money">$104.51</td>
+                <td class="money">$445.91</td>
+                <td class="percent">70.9%</td>
+            </tr>
+            <tr class="good">
+                <td><a href="#">Publisher 13</a></td>
+                <td class="number">8778</td>
+                <td class="money">$185.89</td>
+                <td class="money">$0.12</td>
+                <td class="money">$7.49</td>
+                <td class="money">$178.28</td>
+                <td class="percent">95.9%</td>
+            </tr>
+
+            <tr class="good publisher14">
+                <td><a href="#">Publisher 14</a></td>
+                <td class="number">596</td>
+                <td class="money">$5.63</td>
+                <td class="money">$0.25</td>
+                <td class="money">$0.51</td>
+                <td class="money">$4.87</td>
+                <td class="percent">86.5%</td>
+            </tr>
+            <tr class="marginal">
+                <td><a href="#">Publisher 15</a></td>
+                <td class="number">9153</td>
+                <td class="money">$9.64</td>
+                <td class="money">$0.09</td>
+                <td class="money">$7.81</td>
+                <td class="money">$1.73</td>
+                <td class="percent">18.0%</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="summary">
+                <td>Summary</td>
+                <td class="number">154,657</td>
+                <td class="money">$1,464.61</td>
+                <td class="money">$755.84</td>
+                <td class="money">$169.22</td>
+                <td class="money">$538.55</td>
+                <td class="percent">36.9%</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
