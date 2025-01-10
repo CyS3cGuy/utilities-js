@@ -1,0 +1,134 @@
+path {
+    d: path("M150, 10 L40, 200 L260, 200 L260, 200Z");
+    fill: #4c6edb;
+    transition: all 0.5s ease;
+}
+
+path:active {
+    d: path("M220, 10 L40, 10 L40, 220 L220, 220Z");
+    fill: #6e40aa;
+
+}
+
+:root {
+    --color-1: #6e40aa;
+    --color-2: #4c6edb;
+    --color-3: #24aad8;
+    --color-4: #1ac7c2;
+    --color-5: #1ddea3;
+}
+
+.shape {
+    cy: 50;
+    r: 20;
+    animation: moveCircle 1250ms ease-in-out both infinite;
+}
+
+.shape:nth-child(1) {
+    cx: 60;
+    fill: var(--color-1);
+
+}
+
+.shape:nth-child(2) {
+    cx: 120;
+    fill: var(--color-2);
+    animation-delay: 100ms;
+}
+
+.shape:nth-child(3) {
+    cx: 180;
+    fill: var(--color-3);
+    animation-delay: 200ms;
+}
+
+.shape:nth-child(4) {
+    cx: 240;
+    fill: var(--color-4);
+    animation-delay: 300ms;
+}
+
+.shape:nth-child(5) {
+    cx: 300;
+    fill: var(--color-5);
+    animation-delay: 400ms;
+}
+
+@keyframes moveCircle {
+    50% {
+        cy: 150;
+        r: 13;
+    }
+}
+
+
+
+.black {
+    fill: black;
+    animation-direction: alternate;
+}
+
+.white {
+    fill: white;
+    animation-direction: alternate-reverse;
+}
+
+.topleft {
+    transform-origin: 50px 50px;
+}
+
+.bottomleft {
+    transform-origin: 50px 150px;
+}
+
+.topright {
+    transform-origin: 150px 50px;
+}
+
+.bottomright {
+    transform-origin: 150px 150px;
+}
+
+@keyframes backgroundshift {
+    49.99% {
+        background: white;
+    }
+
+    50% {
+        background: black;
+    }
+
+    100% {
+        background: black;
+    }
+}
+
+@keyframes scaleshift {
+    0% {
+        transform: scale(.001);
+        rx: 50;
+    }
+
+    35% {
+        rx: 40;
+    }
+
+    50% {
+        transform: scale(1);
+        rx: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        rx: 0;
+    }
+}
+
+
+pattern rect {
+    animation: scaleshift 3s infinite cubic-bezier(.36, .17, .86, .67);
+}
+
+.container {
+    animation: backgroundshift 3s alternate infinite;
+}
