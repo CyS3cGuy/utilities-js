@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input[type="checkbox"] {
+            appearance: none;
+
+            position:  relative;
+            outline: 2px solid black;
+            border-radius: 1em;
+            width: 3em;
+            height: 1.5em;
+            vertical-align: -0.5em;
+            background-color: white;
+        }
+
+        input[type="checkbox"]::before {
+            position: absolute;
+            border-radius: 50%;
+            left: 0.2em;
+            top: 0.15em;
+            content: "";
+            width: 1.2em;
+            height: 1.2em;
+            background: black;
+            transition-duration: 200ms;
+            transform: translateX(0);
+            
+        }
+
+        input[type="checkbox"]:checked::before {
+            transform: translateX(1.3em);
+            
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: rgb(236, 207, 152);
+            transition-duration: 200ms;
+        }
+
+        input[type="checkbox"] + label .on,
+        input[type="checkbox"]:checked + label .off {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked + label .on,
+        input[type="checkbox"] + label .off {
+            display: revert;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <p>
+            <input type="checkbox" name="toggle" id="toggle">
+            <label for="toggle">
+                <span class="on">ON</span>
+                <span class="off">OFF</span>
+            </label>
+        </p>
+    </form>
+</body>
+</html>

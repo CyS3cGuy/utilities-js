@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input[type="radio"] {
+            appearance: none;
+
+            position: relative; 
+            width: 1.3em;
+            height: 1.3em;
+            border: 2px solid gray;
+            border-radius: 50%;
+            vertical-align: -2px;
+            animation-duration: 200ms;
+        }
+
+        input[type="radio"]::before {
+
+            content: "";
+            position: absolute;
+            width: 0.7em;
+            height: 0.7em;
+            background: red;
+            border-radius: 50%;
+            left: 2px;
+            top: 2px;
+
+            transform: scale(0);
+            transform-origin: center;
+            transition-duration: 300ms;
+            
+        }
+
+        input[type="radio"]:checked::before {
+            transform: scale(1);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Fruit Preferences</legend>
+
+            <p>
+                <input type="radio" name="fruit" id="cherry">
+                <label for="cherry">Cherry</label>
+            </p>
+
+            <p>
+                <input type="radio" name="fruit" id="banana">
+                <label for="banana">Banana</label>
+            </p>
+            
+            <p>
+                <input type="radio" name="fruit" id="strawberry">
+                <label for="strawberry">Strawberry</label>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
